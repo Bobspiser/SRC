@@ -71,7 +71,7 @@ for i in range(10):
         x_n = x ** n_1
         x_n_1 = x ** n_2
 #Formel for Newtons metoden
-    N = x - (a * x_n + b * x_n_1 + c * x_n_2) / (diff_a * x_d_n + diff_b * x_diff_n_1 + diff_c * x_diff_n_2)
+    N = x - (a * x_n + b * x_n_1 + c * x_n_2) / (diff_a * x_diff_n + diff_b * x_diff_n_1 + diff_c * x_diff_n_2)
 
     print(N)
     
