@@ -6,73 +6,73 @@ x = float(input("Indtast x-værdi: "))
 #Inputs af brugerens valg
 a = float(input("Indtast din a-værdi: "))
 
-n = int(input("Indtast din n-værdi: "))
+n_1 = int(input("Indtast din n-værdi: "))
 
 b = float(input("Indtast din b-værdi: "))
 
-n1 = int(input("Indtast din anden n-værdi: "))
+n_2 = int(input("Indtast din anden n-værdi: "))
 
 c = float(input("Indtast din c-værdi: "))
 
-n2 = int(input("indtast din tredje n-værdi: "))
+n_3 = int(input("indtast din tredje n-værdi: "))
 
 
-da = a*n
+diff_a = a * n_1
 
-db = b*n1
+diff_b = b * n_2
 
-dc = c*n2
+diff_c = c * n_3
 
-dn = n-1
+diff_n = n_1 - 1
 
-dn1 = n1-1
+diff_n_1 = n_2 - 1
 
-dn2 = n2-1
+diff_n_2 = n_3 - 1
 
 
 #Differenceret ligning som der bliver skrevet ud
-if n2>=2:
-        y = print(da, "x^", dn
-                ,db, "x^", dn1
-                 ,dc, "x^", dn2)
+if n_3 >= 2:
+        y = print(diff_a, "x^", diff_n
+                ,diff_b, "x^", diff_n_1
+                 ,diff_c, "x^", diff_n_2)
 
     
-elif n2==1:
-        y = print(da, "x^", dn
-                ,db, "x^", dn1
-                 ,dc)
+elif n_3 == 1:
+        y = print(diff_a, "x^", diff_n
+                ,diff_b, "x^", diff_n_1
+                 ,diff_c)
 
-elif n2==0:
-        y = print(da, "x^", dn
-                ,db, "x^", dn1)
+elif n_3 == 0:
+        y = print(diff_a, "x^", diff_n
+                ,diff_b, "x^", diff_n_1)
 
 #Et loop for newtons metode
 for i in range(10):
     
 #If, else statements for potenserne op løftet i x-værdien
-    if n2>=2:
-        xdn=x**dn
-        xdn1=x**dn1
-        xdn2=x**dn2
-        xn=x**n
-        xn1=x**n1
-        xn2=x**n2
-    elif n2>=1:
-        xdn=x**dn
-        xdn1=x**dn1
-        xdn2=x**dn2
-        xn=x**n
-        xn1=x**n1
-        xn2=x**n2
-    elif n2==0:
-        xdn=x**dn
-        xdn1=x**dn1
-        xdn2=x**dn2
-        xn=x**n
-        xn1=x**n1
+    if n_3 >= 2:
+        x_diff_n = x ** diff_n
+        x_diff_n_1 = x ** diff_n_1
+        x_diff_n_2 = x ** diff_n_2
+        x_n = x ** n_1
+        x_n_1 = x ** n_2
+        x_n_2 = x ** n_3
+    elif n_3 >= 1:
+        x_diff_n = x ** diff_n
+        x_diff_n_1 = x ** diff_n_1
+        x_diff_n_2 = x ** diff_n_2
+        x_n = x ** n_1
+        x_n_1 = x ** n_2
+        x_n_2 = x ** n_3
+    elif n_3 == 0:
+        x_diff_n = x ** diff_n
+        x_diff_n_1 = x ** diff_n_1
+        x_diff_n_2 = x ** diff_n_2
+        x_n = x ** n_1
+        x_n_1 = x ** n_2
 #Formel for Newtons metoden
-    N = x-(a*xn+b*xn1+c*xn2)/(da*xdn+db*xdn1+dc*xdn2)
+    N = x - (a * x_n + b * x_n_1 + c * x_n_2) / (diff_a * x_d_n + diff_b * x_diff_n_1 + diff_c * x_diff_n_2)
 
     print(N)
     
-    x=N
+    x = N
